@@ -1,5 +1,17 @@
 # RX Transfer Service
 
+## 🚨 **IMPORTANT: USAGE RESTRICTIONS**
+
+> **⚠️ PROPRIETARY AND CONFIDENTIAL - UNAUTHORIZED USE PROHIBITED** ⚠️
+> 
+> **This API service contains proprietary code for the Ransferrx healthcare pharmacy management system.**
+> 
+> **❌ YOU ARE NOT ALLOWED TO USE, COPY, MODIFY, OR DISTRIBUTE THIS CODE WITHOUT EXPLICIT PERMISSION.**
+> 
+> **✅ If you need to use this code, you MUST contact us first for licensing approval: minamdoss@outlook.com**
+
+---
+
 A comprehensive FastAPI-based service for validating prescription transfers according to NCPDP SCRIPT 2017071 standards and DEA EPCS requirements.
 
 ## 🏥 **Service Overview**

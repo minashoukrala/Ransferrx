@@ -1,5 +1,17 @@
 # Ransferrx Infrastructure - Terraform Configuration
 
+## 🚨 **IMPORTANT: USAGE RESTRICTIONS**
+
+> **⚠️ PROPRIETARY AND CONFIDENTIAL - UNAUTHORIZED USE PROHIBITED** ⚠️
+> 
+> **This infrastructure configuration contains proprietary code for the Ransferrx healthcare pharmacy management system.**
+> 
+> **❌ YOU ARE NOT ALLOWED TO USE, COPY, MODIFY, OR DISTRIBUTE THIS CODE WITHOUT EXPLICIT PERMISSION.**
+> 
+> **✅ If you need to use this code, you MUST contact us first for licensing approval: minamdoss@outlook.com**
+
+---
+
 > **PROPRIETARY AND CONFIDENTIAL** - This directory contains the Azure infrastructure configuration for the Ransferrx healthcare pharmacy management system. Unauthorized access, copying, or distribution is strictly prohibited.
 
 ## 🏗️ **Infrastructure Overview**
