@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ncpdp.org/schema/SCRIPT"
+           targetNamespace="http://www.ncpdp.org/schema/SCRIPT"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <!-- This is a placeholder XSD schema for NCPDP SCRIPT 2017071 -->
+    <!-- Replace this with the actual NCPDP SCRIPT 2017071 XSD schema -->
+    
+    <xs:element name="Message">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Header" type="HeaderType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="Body" type="BodyType" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="HeaderType">
+        <xs:sequence>
+            <xs:element name="From" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="To" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="MessageId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Timestamp" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BodyType">
+        <xs:sequence>
+            <xs:element name="RxTransfer" type="RxTransferType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RxTransferType">
+        <xs:sequence>
+            <xs:element name="SolicitedResponse" type="xs:boolean"/>
+            <xs:element name="Patient" type="PatientType"/>
+            <xs:element name="Pharmacy" type="PharmacyType" maxOccurs="2"/>
+            <xs:element name="Pharmacist" type="PharmacistType"/>
+            <xs:element name="MedicationTransferred" type="MedicationTransferredType"/>
+            <xs:element name="TransferRequest" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PatientType">
+        <xs:sequence>
+            <xs:element name="FirstName" type="xs:string"/>
+            <xs:element name="LastName" type="xs:string"/>
+            <xs:element name="DateOfBirth" type="xs:date"/>
+            <xs:element name="Gender" type="xs:string"/>
+            <xs:element name="AddressLine1" type="xs:string"/>
+            <xs:element name="City" type="xs:string"/>
+            <xs:element name="State" type="xs:string"/>
+            <xs:element name="PostalCode" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PharmacyType">
+        <xs:sequence>
+            <xs:element name="NCPDPID" type="xs:string"/>
+            <xs:element name="NPI" type="xs:string"/>
+            <xs:element name="BusinessName" type="xs:string"/>
+            <xs:element name="TransferType" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PharmacistType">
+        <xs:sequence>
+            <xs:element name="FirstName" type="xs:string"/>
+            <xs:element name="LastName" type="xs:string"/>
+            <xs:element name="NPI" type="xs:string"/>
+            <xs:element name="DEANumber" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MedicationTransferredType">
+        <xs:sequence>
+            <xs:element name="MedicationPrescribed" type="MedicationPrescribedType"/>
+            <xs:element name="ControlledSubstanceIndicator" type="xs:string"/>
+            <xs:element name="DoNotFill" type="xs:string" minOccurs="0"/>
+            <xs:element name="DigitalSignature" type="xs:string" minOccurs="0"/>
+            <xs:element name="PrescriptionPreviouslyFilled" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MedicationPrescribedType">
+        <xs:sequence>
+            <xs:element name="DrugDescription" type="xs:string"/>
+            <xs:element name="Quantity" maxOccurs="3">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Value" type="xs:decimal"/>
+                        <xs:element name="CodeListQualifier" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="NumberOfRefills" type="xs:int"/>
+            <xs:element name="RefillsRemaining" type="xs:int"/>
+            <xs:element name="WrittenDate" type="xs:date"/>
+            <xs:element name="SigText" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema> 

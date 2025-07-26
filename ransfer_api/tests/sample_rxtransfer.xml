@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xmlns="http://www.ncpdp.org/schema/SCRIPT">
+  <Header>
+    <From>SenderPharmacy</From>
+    <To>ReceiverPharmacy</To>
+    <MessageId>12345</MessageId>
+    <Timestamp>2025-07-06T12:00:00</Timestamp>
+  </Header>
+  <Body>
+    <RxTransfer>
+      <SolicitedResponse>true</SolicitedResponse>
+      <Patient>
+        <FirstName>Mary</FirstName>
+        <LastName>Smith</LastName>
+        <DateOfBirth>1954-12-25</DateOfBirth>
+        <Gender>F</Gender>
+        <AddressLine1>45 East Road SW</AddressLine1>
+        <City>Pigeon Forge</City>
+        <State>TN</State>
+        <PostalCode>37682</PostalCode>
+      </Patient>
+      <Pharmacy>
+        <NCPDPID>7701631</NCPDPID>
+        <NPI>8787878787</NPI>
+        <BusinessName>Forge Pharmacy</BusinessName>
+        <TransferType>TRANSFER TO PHARMACY</TransferType>
+      </Pharmacy>
+      <Pharmacy>
+        <NCPDPID>1234567</NCPDPID>
+        <NPI>1234567</NPI>
+        <BusinessName>Pharmacy Two</BusinessName>
+        <TransferType>TRANSFER FROM PHARMACY</TransferType>
+      </Pharmacy>
+      <Pharmacist>
+        <FirstName>Michelson</FirstName>
+        <LastName>Wnn</LastName>
+        <NPI>9999998888</NPI>
+        <DEANumber>AB111119</DEANumber>
+      </Pharmacist>
+      <MedicationTransferred>
+        <MedicationPrescribed>
+          <DrugDescription>Amlodipine 5mg Tablet</DrugDescription>
+          <Quantity>
+            <Value>180</Value>
+            <CodeListQualifier>38</CodeListQualifier>
+          </Quantity>
+          <Quantity>
+            <Value>30</Value>
+            <CodeListQualifier>40</CodeListQualifier>
+          </Quantity>
+          <Quantity>
+            <Value>30</Value>
+            <CodeListQualifier>QT</CodeListQualifier>
+          </Quantity>
+          <NumberOfRefills>8</NumberOfRefills>
+          <RefillsRemaining>6</RefillsRemaining>
+          <WrittenDate>2025-01-15</WrittenDate>
+          <SigText>Take one tablet by mouth every morning for hypertension</SigText>
+        </MedicationPrescribed>
+        <ControlledSubstanceIndicator>N</ControlledSubstanceIndicator>
+        <DoNotFill>N</DoNotFill>
+        <DigitalSignature>SampleSignatureHere</DigitalSignature>
+        <PrescriptionPreviouslyFilled>false</PrescriptionPreviouslyFilled>
+      </MedicationTransferred>
+      <TransferRequest>SPECIFIC</TransferRequest>
+    </RxTransfer>
+  </Body>
+</Message> 
