@@ -770,7 +770,7 @@ resource "azurerm_linux_function_app" "res-736" {
   name                                     = "ransferrx-retry-handler"
   resource_group_name                      = "rg-ransferrx-prod"
   service_plan_id                          = azurerm_service_plan.res-734.id
-  storage_account_access_key               = "[REDACTED - Storage Account Access Key]="
+  storage_account_access_key               = var.storage_account_access_key
   storage_account_name                     = "rgransferrxprodb884"
   tags = {
     "hidden-link: /app-insights-resource-id" = azurerm_application_insights.res-743.id
@@ -778,7 +778,7 @@ resource "azurerm_linux_function_app" "res-736" {
   virtual_network_subnet_id                      = "/subscriptions/6622e711-f53b-4b22-a83e-050e9f01d7a3/resourceGroups/rg-ransferrx-prod/providers/Microsoft.Network/virtualNetworks/ransferrx-vnet/subnets/app-subnet"
   webdeploy_publish_basic_authentication_enabled = false
   site_config {
-    application_insights_connection_string = "InstrumentationKey=abdcab09-096d-4202-b54e-320687ed434c;IngestionEndpoint=https://westus2-2.in.applicationinsights.azure.com/;LiveEndpoint=https://westus2.livediagnostics.monitor.azure.com/;ApplicationId=6077a2ff-a3ce-4292-ad96-f99497c23ac6"
+    application_insights_connection_string = var.application_insights_connection_string
     ftps_state                             = "FtpsOnly"
     ip_restriction_default_action          = ""
     scm_ip_restriction_default_action      = ""
