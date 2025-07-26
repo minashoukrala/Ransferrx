@@ -1,0 +1,13 @@
+# Example terraform.tfvars file
+# Copy this to terraform.tfvars and fill in your actual values
+# DO NOT commit terraform.tfvars to version control
+
+# Storage account access key (get from Azure portal or CLI)
+storage_account_access_key = "your-storage-account-access-key-here"
+
+# Application Insights connection string (get from Azure portal)
+application_insights_connection_string = "InstrumentationKey=your-instrumentation-key;IngestionEndpoint=https://your-endpoint;LiveEndpoint=https://your-live-endpoint;ApplicationId=your-app-id"
+
+# Azure subscription and tenant IDs (get from Azure portal or CLI)
+subscription_id = "your-subscription-id-here"
+tenant_id = "your-tenant-id-here" 
