@@ -1,4 +1,4 @@
-# Ransferrx - Healthcare Pharmacy Management System
+# Ransferrx
 
 ## 🚨 **IMPORTANT: USAGE RESTRICTIONS**
 
