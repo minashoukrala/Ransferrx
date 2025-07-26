@@ -1,3 +1,8 @@
+# Data source for resource group
+data "azurerm_resource_group" "existing" {
+  name = "rg-ransferrx-prod"
+}
+
 resource "azurerm_resource_group" "res-0" {
   location = "westus2"
   name     = "rg-ransferrx-prod"
@@ -7,7 +12,7 @@ resource "azurerm_key_vault" "res-1" {
   name                = "ransferrx-keyvault"
   resource_group_name = "rg-ransferrx-prod"
   sku_name            = "premium"
-  tenant_id           = "07dd1dd1-3c75-439b-a01d-62eb70f28108"
+  tenant_id           = var.tenant_id
   depends_on = [
     azurerm_resource_group.res-0
   ]
